@@ -1,0 +1,341 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+.ej-widget{
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.ej-emojirater{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #666;
+    margin: 0 auto;
+}
+.ej-emojiContainer{
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 6px 1px rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 6px 1px rgb(0 0 0 / 15%);
+  border-radius: 30px;
+  height: 60px;
+  margin: 20px 0px 35px 0px;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+.ej-emojiContainer span{
+  font-size: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.ej-emojiContainer .ej-activerating{
+  border: 3px solid red;
+  padding: 2px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: linear;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-8px); }
+  50%  { transform: translateY(0px); }
+  75%  { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+
+.ej-modal {
+  position: absolute;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 6px 1px rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 6px 1px rgb(0 0 0 / 15%);
+  border-radius: 3px;
+  bottom: 7.4rem;
+  right: 0;
+  width: 330px;
+  padding: 20px;
+  overflow: auto;
+  z-index: 1;
+  margin-right: 0px;
+}
+
+.ej-close {
+  position: absolute;
+  right: 0px;
+  width: 15px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+  right: 17px;
+  top: 12px;
+}
+.ej-close:before, .ej-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 15px;
+  width: 2px;
+  background-color: #333;
+}
+.ej-close:before {
+  transform: rotate(45deg);
+}
+.ej-close:after {
+  transform: rotate(-45deg);
+}
+.ej-input, .ej-button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+
+.ej-input {
+  border: 2px solid #DADDEC;
+  margin: 5px 0 0px;
+  font-size: 1rem;
+  color: #656880;
+  font-family: inherit;
+}
+
+.ej-button {
+  background-image: linear-gradient(to right, #89CAFF, #6589FF);
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #89caff94;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.ej-button:hover {
+  box-shadow: none;
+}
+.ej-textarea{
+  display: block;
+  resize: none;
+  margin-top: 0;
+}
+/* back button */
+.ej-backContainer{
+  position: relative;
+}
+.ej-error{
+  color: red;
+  font-size: 12px;
+}
+
+.ej-errorBorder{
+  border: 1px solid red;
+}
+.ej-inputContainer{
+  margin-bottom: 15px;
+}
+
+div.ej-backBtn {
+  width: 100px;
+  background-color: #f4f4f4;
+  position: absolute;
+  cursor: pointer;
+  left: 12px;
+  top: -4px;
+}
+
+span.ej-line {
+  bottom: auto;
+  right: auto;
+  top: auto;
+  left: auto;
+  background-color: #333;
+  border-radius: 10px;
+  width: 100%;
+  left: 0px;
+  height: 2px;
+  display: block;
+  position: absolute;
+}
+
+span.ej-tLine {
+  top: 0px;
+}
+
+span.ej-mLine {
+  top: 13px;
+  opacity: 0;
+}
+
+span.ej-bLine {
+  top: 26px;
+}
+.ej-feedbackheading{
+  margin-left: 40px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 1.5rem;
+}
+div.ej-backBtn span.ej-line {
+  left: -12px;
+  height: 3px;
+  background-color: #F76060;
+}
+
+div.ej-backBtn span.ej-tLine {
+  width: 15px;
+  transform: rotate(-45deg);
+  left: -15px;
+  top: 8px;
+}
+
+div.ej-backBtn span.ej-mLine {
+  opacity: 1;
+  width: 22px;
+}
+
+div.ej-backBtn span.ej-bLine {
+  width: 15px;
+  transform: rotate(45deg);
+  left: -15px;
+  top: 18px;
+}
+/** thank you text animation  **/
+.thankyouContainer{
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.thankyou {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.ej-thank{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.thankyou:first-of-type {
+  animation: showup 7s infinite;
+}
+
+.thankyou:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.thankyou:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:100px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:100px;}
+}
