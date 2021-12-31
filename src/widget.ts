@@ -78,7 +78,7 @@ const Widget: IWidget = {
       switch (data) {
         case 'message': {
           // eslint-disable-next-line no-unused-expressions
-          window.document.getElementsByTagName('body')[0].style.background = 'grey';
+          // window.document.getElementsByTagName('body')[0].style.background = 'grey';
           break;
         }
         default:
