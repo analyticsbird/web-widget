@@ -27,11 +27,11 @@ const EmojiRater: React.FC <PropTypes> = ({
   };
   return (
     <div className="ej-emojiContainer">
-      <span className={rating === 1 ? 'ej-activerating' : ''} onClick={() => setRateRequest(1)}>😍</span>
-      <span className={rating === 2 ? 'ej-activerating' : ''} onClick={() => setRateRequest(2)}>😃</span>
+      <span className={rating === 5 ? 'ej-activerating' : ''} onClick={() => setRateRequest(5)}>😍</span>
+      <span className={rating === 4 ? 'ej-activerating' : ''} onClick={() => setRateRequest(4)}>😃</span>
       <span className={rating === 3 ? 'ej-activerating' : ''} onClick={() => setRateRequest(3)}>😟</span>
-      <span className={rating === 4 ? 'ej-activerating' : ''} onClick={() => setRateRequest(4)}>😢</span>
-      <span className={rating === 5 ? 'ej-activerating' : ''} onClick={() => setRateRequest(5)}>😠</span>
+      <span className={rating === 2 ? 'ej-activerating' : ''} onClick={() => setRateRequest(2)}>😢</span>
+      <span className={rating === 1 ? 'ej-activerating' : ''} onClick={() => setRateRequest(1)}>😠</span>
     </div>
   );
 };
